@@ -1,0 +1,639 @@
+// Created    : 2024-11-12 15:13:35
+// Executable : C:\Program Files (x86)\DHI\MIKE Zero\2024\bin\x64\femenginehd.exe
+// Version    : 22.0.3.17277
+
+
+======================= Computing Environment ========================
+  Local machine name              : DKCPH1-GPU2412
+  Number of subdomains            : 6
+  Local subdomain id              : 0
+  Specified threads per subdomain : 4
+======================================================================
+
+
+======================================================================
+Target: FemEngineHD
+
+    delete_logfile : 1 (default)
+    merge_data_default : 2 (default)
+
+
+  Section: SYSTEM ----------------------------------------------------
+
+
+  Section: TIME ------------------------------------------------------
+      start_time : 2022 1 1 0 0 0 
+      time_step_interval : 600
+      number_of_time_steps : 105114
+
+
+  Section: DOMAIN ----------------------------------------------------
+      number_of_dimensions : 2
+      file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\setup\Mesh_8000_elems_HD_v2.mesh
+      check_mesh : 1 (default)
+      datum_depth : 0
+      minimum_depth : 8.746446
+      thresshold_depth : 8.746446 (default)
+
+
+========================== Mesh information ==========================
+  Number of elements         : 8566
+  Number of faces            : 13069
+  Number of nodes            : 4504
+  Number of sections         : 3
+  Min x-coordinate (degree)  : -2.4591
+  Max x-coordinate (degree)  : 8.837038
+  Min y-coordinate (degree)  : 49.675121
+  Max y-coordinate (degree)  : 56
+  Min z-coordinate (m)       : -104.88746
+  Max z-coordinate (m)       : 8.746446
+======================================================================
+
+
+======================== Boundary information ========================
+
+  number                code    number of points     number of faces
+       1                   1                 303                 301
+       2                   2                  33                  32
+       3                   3                 108                 107
+======================================================================
+      type_of_partitioning : 2 (default)
+      type_of_weighting : 0 (default)
+      use_METIS5_options : 0 (default)
+      small_master_partition : 1 (default)
+      type_of_halo_layer : 2 (default)
+      write_partitioning : 0 (default)
+
+
+============================= Partition ==============================
+  Number of partitions: 6
+ 
+  Dimension of mesh: 2
+ 
+ ---------------------------------------------------------------------
+  Partition Total elements     Domains           Halo elements
+                                            Internal      External
+ ---------------------------------------------------------------------
+          1            1427             1            66            67
+          2            1428             3           176           174
+          3            1428             4           173           173
+          4            1428             2            69            70
+          5            1427             3            99            91
+          6            1428             3           143           151
+ ---------------------------------------------------------------------
+        Sum            8566            16           726           726
+        Min            1427             1            66            67
+        Max            1428             4           176           174
+       Mean      0.1427E+04    0.2000E+01    0.1210E+03    0.1210E+03
+        Std      0.8165E+00    0.1155E+01    0.4551E+02    0.4624E+02
+ ---------------------------------------------------------------------
+======================================================================
+
+
+================= Mesh information - 2D (subdomain) ==================
+  Number of elements         : 1494
+  Number of elements (int.)  : 1427
+  Number of faces            : 2303
+  Number of faces (int.)     : 2199
+  Number of nodes            : 810
+  Number of nodes (int.)     : 773
+  Number of sections         : 2
+  Min x-coordinate (degree)  : 5.466414
+  Max x-coordinate (degree)  : 8.837038
+  Min y-coordinate (degree)  : 53.461321
+  Max y-coordinate (degree)  : 56
+  Min z-coordinate (m)       : -50.578369
+  Max z-coordinate (m)       : 6.871119
+======================================================================
+
+
+=============== Boundary information - 2D (subdomain) ================
+
+  number                code    number of points     number of faces
+       1                   1                  68                  67
+       2                   3                  20                  19
+======================================================================
+
+
+============== Halo layer information - 2D (subdomain) ===============
+
+ Internal layer
+
+  number    connected domain  number of elements
+       1                   2                  66
+
+ External layer
+
+  number    connected domain  number of elements
+       1                   2                  67
+======================================================================
+
+
+    Section: MATERIAL ------------------------------------------------
+        include_material_zones : 0
+
+
+    Section: INFRASTRUCTURE ------------------------------------------
+        include_building_zones : 0
+        include_road_zones : 0
+
+
+  Section: MODULE_SELECTION ------------------------------------------
+      mode_of_hydrodynamic_module : 2
+      hydrodynamic_features : 1
+      fluid_property : 1
+      mode_of_transport_module : 0
+      mode_of_mud_transport_module : 0
+      mode_of_sand_transport_module : 0
+      mode_of_eco_lab_module : 0
+      mode_of_particle_tracking_module : 0
+      mode_of_data_assimilation_module : 0 (default)
+
+
+  Section: HYDRODYNAMIC_MODULE ---------------------------------------
+      mode : 2
+
+
+    Section: EQUATION ------------------------------------------------
+        formulation : 4
+        time_formulation : 2 (default)
+
+
+    Section: TIME ----------------------------------------------------
+        start_time_step : 0
+        time_step_factor : 1
+
+
+    Section: FLOOD_AND_DRY -------------------------------------------
+        type : 2
+        drying_depth : 0.005
+        mass_depth : 0.1
+        wetting_depth_maximum : 0.1 (default)
+        maximum_number_of_iterations : 100 (default)
+
+
+    Section: DEPTH ---------------------------------------------------
+        type : 0
+
+
+    Section: DENSITY -------------------------------------------------
+        type : 0
+
+
+    Section: EDDY_VISCOSITY ------------------------------------------
+        kinematic_viscosity_of_water : 0.000001 (default)
+
+
+      Section: HORIZONTAL_EDDY_VISCOSITY -----------------------------
+          type : 3
+
+
+        Section: SMAGORINSKY_FORMULATION -----------------------------
+            format : 0
+            constant_value : 0.28
+            minimum_eddy_viscosity : 0.000001
+            maximum_eddy_viscosity : 1.E+10
+
+
+    Section: BED_RESISTANCE ------------------------------------------
+        type : 4
+
+
+      Section: MANNING_NUMBER ----------------------------------------
+          format : 0
+          constant_value : 32
+
+
+    Section: VEGETATION ----------------------------------------------
+        type : 0
+
+
+    Section: CORIOLIS ------------------------------------------------
+        type : 2
+
+
+    Section: WIND_FORCING --------------------------------------------
+        type : 1
+        format : 3
+        file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\wind.dfs2
+        item_number_for_pressure : 3
+        item_number_for_x_velocity : 1
+        item_number_for_y_velocity : 2
+------------------------- Data File Summary --------------------------
+  Creator: mikeio
+  File   : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\wind.dfs2
+  Title  : 
+
+  Start date  Start time  Sets   Interval  Unit
+  2022-01-01    00:00:00 17520       3600  second
+
+  Axis  Sets   Interval  Axis origin  Unit
+     1    49 16666.7011            0   meter
+     2    51 16666.7011            0   meter
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  U                    Wind Velocity        -26.619532    27.1229 meter/sec
+  V                    Wind Velocity        -22.287714  26.968582 meter/sec
+  Mean Sea Level Press Pressure             955.205933 1050.87182 hectopascal
+----------------------------------------------------------------------
+        neutral_pressure : 1013
+        type_of_soft_start : 2
+        soft_time_interval : 0
+
+
+      Section: WIND_FRICTION -----------------------------------------
+          type : 1
+          linear_friction_low : 0.001882
+          linear_speed_low : 7
+          linear_friction_high : 0.0033
+          linear_speed_high : 25
+
+
+    Section: ICE -----------------------------------------------------
+        type : 0
+
+
+    Section: TIDAL_POTENTIAL -----------------------------------------
+        type : 0
+
+
+    Section: PRECIPITATION_EVAPORATION -------------------------------
+        type_of_precipitation : 0
+        type_of_evaporation : 0
+
+
+    Section: INFILTRATION --------------------------------------------
+        type : 0
+
+
+    Section: RADIATION_STRESS ----------------------------------------
+        type : 0
+
+
+    Section: SOURCES -------------------------------------------------
+        number_of_sources : 0
+
+
+    Section: SOLUTION_TECHNIQUE --------------------------------------
+        additional_settings : 1 (default)
+        scheme_of_time_integration : 1
+        scheme_of_space_discretization_horizontal : 1
+        gradient_calculation : 3 (default)
+        gradient_limiter : 0 (default)
+        face_value_limiter : 2 (default)
+        boundary_correction : 1 (default)
+        type_of_Riemann_solver : 3
+        Riemann_factor : 1
+        type_of_face_depth : 3 (default)
+        gravity_calculation : 2 (default)
+        max_iterations_bed_resistance : 25 (default)
+        type_of_land_condition : 2 (default)
+        type_of_gate_condition : 1 (default)
+        CFL_critical_HD : 0.8
+        dt_min_HD : 0.01
+        dt_max_HD : 30
+        CFL_correction_HD : 0 (default)
+        time_stepping_AD : 1 (default)
+        CFL_critical_AD : 0.8
+        dt_min_AD : 0.01
+        dt_max_AD : 30
+        CFL_critical_substeps_AD : 0.8 (default)
+        error_level : 0
+        maximum_number_of_errors : 200
+
+
+    Section: STRUCTURE_MODULE ----------------------------------------
+        method : 2 (default)
+
+
+    Section: STRUCTURES ----------------------------------------------
+        check_structures : 1 (default)
+
+
+      Section: DIKES -------------------------------------------------
+          number_of_dikes : 0
+          output_of_link_data : 0
+
+
+      Section: GATES -------------------------------------------------
+          number_of_gates : 0
+          output_of_link_data : 0 (default)
+          format_of_link_data : 1 (default)
+
+
+      Section: PIERS -------------------------------------------------
+          format : 0
+          number_of_piers : 0
+
+
+      Section: TURBINES ----------------------------------------------
+          number_of_turbines : 0
+
+
+      Section: SHIP --------------------------------------------------
+
+
+    Section: INFRASTRUCTURE ------------------------------------------
+
+
+    Section: INITIAL_CONDITIONS --------------------------------------
+        type : 1
+        surface_elevation_constant : 0
+        u_velocity_constant : 0
+        v_velocity_constant : 0
+
+
+    Section: BOUNDARY_CONDITIONS -------------------------------------
+        internal_land_boundary_type : 1
+
+
+      Section: CODE_1 ------------------------------------------------
+          type : 1
+
+
+      Section: CODE_2 ------------------------------------------------
+          type : 12
+          type_interpolation_constrain : 0
+          type_of_data : 2 (default)
+          format : 3
+          file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_South_downsampled.dfs1
+          item_numbers : 2 3 
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_values : 0 0 
+          type_of_time_interpolation : 1
+          method_of_space_interpolation : 1 (default)
+          type_of_space_interpolation : 1
+
+
+        Section: DATA_2 ----------------------------------------------
+            format : 3
+            file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_South_downsampled.dfs1
+            item_number : 1
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+            method_of_space_interpolation : 1 (default)
+            type_of_space_interpolation : 1
+          type_of_coriolis_correction : 0
+          type_of_wind_correction : 0
+          type_of_pressure_correction : 0
+          type_of_relaxation : 0 (default)
+          distance : 10000 (default)
+
+
+      Section: CODE_3 ------------------------------------------------
+          type : 12
+          type_interpolation_constrain : 0
+          type_of_data : 2 (default)
+          format : 3
+          file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_North_downsampled.dfs1
+          item_numbers : 2 3 
+          type_of_soft_start : 2
+          soft_time_interval : 0
+          reference_values : 0 0 
+          type_of_time_interpolation : 1
+          method_of_space_interpolation : 1 (default)
+          type_of_space_interpolation : 1
+
+
+        Section: DATA_2 ----------------------------------------------
+            format : 3
+            file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_North_downsampled.dfs1
+            item_number : 1
+            type_of_soft_start : 2
+            soft_time_interval : 0
+            reference_value : 0
+            type_of_time_interpolation : 1
+            method_of_space_interpolation : 1 (default)
+            type_of_space_interpolation : 1
+          type_of_coriolis_correction : 0
+          type_of_wind_correction : 0
+          type_of_pressure_correction : 0
+          type_of_relaxation : 0 (default)
+          distance : 10000 (default)
+------------------------- Data File Summary --------------------------
+  Creator: mikeio
+  File   : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_North_downsampled.dfs1
+  Title  : 
+
+  Start date  Start time  Sets   Interval  Unit
+  2021-12-25    00:00:00106123        600  second
+
+  Axis  Sets   Interval  Axis origin  Unit
+     1    16   0.691095            0   meter
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  Surface elevation    Surface Elevation       -2.7117   3.423463 meter
+  U velocity           u-velocity component   -0.43107    0.59643 meter/sec
+  V velocity           v-velocity component  -0.666853   0.634181 meter/sec
+----------------------------------------------------------------------
+------------------------- Data File Summary --------------------------
+  Creator: mikeio
+  File   : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\input\IJV_BC_North_downsampled.dfs1
+  Title  : 
+
+  Start date  Start time  Sets   Interval  Unit
+  2021-12-25    00:00:00106123        600  second
+
+  Axis  Sets   Interval  Axis origin  Unit
+     1    16   0.691095            0   meter
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  Surface elevation    Surface Elevation       -2.7117   3.423463 meter
+  U velocity           u-velocity component   -0.43107    0.59643 meter/sec
+  V velocity           v-velocity component  -0.666853   0.634181 meter/sec
+----------------------------------------------------------------------
+
+
+    Section: TEMPERATURE_SALINITY_MODULE -----------------------------
+        temperature_mode : 0
+        salinity_mode : 0
+
+
+    Section: DECOUPLING ----------------------------------------------
+        type : 0
+        merge_data : 2 (default)
+
+
+    Section: OUTPUTS -------------------------------------------------
+        number_of_outputs : 1
+        merge_data : 2 (default)
+
+
+      Section: OUTPUT_1 ----------------------------------------------
+          include : 1
+          file_name : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\setup\DWF_HD_Setup_wo_pcor.m21fm - Result Files\Area.dfsu
+          title : Area
+          type : 1
+          format : 2
+          delete_value : 1.E-35 (default)
+          flood_and_dry : 2
+          ordering : 2 (default)
+          precision : 2 (default)
+          use_end_time : 1
+          first_time_step : 0
+          time_step_frequency : 3
+          number_of_variables : 0 (default)
+          interpolation_type : 1
+
+
+        Section: PARAMETERS_2D ---------------------------------------
+            SURFACE_ELEVATION : 1
+            STILL_WATER_DEPTH : 0
+            TOTAL_WATER_DEPTH : 0
+            U_VELOCITY : 1
+            V_VELOCITY : 1
+            P_FLUX : 0
+            Q_FLUX : 0
+            CURRENT_SPEED : 0
+            CURRENT_DIRECTION : 0
+            WIND_U_VELOCITY : 0
+            WIND_V_VELOCITY : 0
+            AIR_PRESSURE : 0
+            PRECIPITATION : 0
+            EVAPORATION : 0
+            BED_RESISTANCE_COEFFICIENT : 0
+            DRAG_COEFFICIENT : 0
+            BED_SHEARSTRESS : 0
+            BED_SHEARSTRESS_X_COMPONENT : 0
+            BED_SHEARSTRESS_Y_COMPONENT : 0
+            EDDY_VISCOSITY : 0
+            CFL_NUMBER : 0
+            CONVERGENCE_ANGLE : 0
+            AREA : 0
+          coordinate_type : LONG/LAT
+
+
+        Section: AREA ------------------------------------------------
+            number_of_points : 4
+
+
+          Section: POINT_1 -------------------------------------------
+              x : -2.572061
+              y : 49.611872
+
+
+          Section: POINT_2 -------------------------------------------
+              x : -2.572061
+              y : 56.063249
+
+
+          Section: POINT_3 -------------------------------------------
+              x : 8.949999
+              y : 56.063249
+
+
+          Section: POINT_4 -------------------------------------------
+              x : 8.949999
+              y : 49.611872
+
+
+======================== COMPUTATION STARTED =========================
+
+
+========================= COMPUTATION ENDED ==========================
+
+
+========================= Output Statistics ==========================
+ 
+------------------------- Data File Summary --------------------------
+  Creator: 
+  File   : C:\Users\frtp\Source\BenchmarkCases\MIKE21HD_DutchCoast\data\setup\DWF_HD_Setup_wo_pcor.m21fm - Result Files\Area.dfsu
+  Title  : Area
+
+  Start date  Start time  Sets   Interval  Unit
+  2022-01-01    00:00:00 35039       1800  second
+
+  Static items:
+  Item name            Item type               Minimum    Maximum Unit
+  Node id              Grid Codes                    1       4504 Integer
+  X-coord              Latitude/longitude      -2.4591   8.837038 degree
+  Y-coord              Latitude/longitude    49.675121         56 degree
+  Z-coord              Item geometry 3-dime -104.88746   8.746446 meter
+  Code                 Grid Codes                    0          3 Integer
+  Element id           Grid Codes                    1       8566 Integer
+  Element type         Grid Codes                   21         21 Integer
+  No of nodes          Grid Codes                    3          3 Integer
+  Connectivity         Grid Codes                    1       4504 Integer
+
+  Dynamic items:
+  Item name            Item type               Minimum    Maximum Unit
+  Surface elevation    Surface Elevation     -5.023972   5.213018 meter
+  U velocity           u-velocity component  -1.545715   1.771598 meter/sec
+  V velocity           v-velocity component  -1.983072   2.291547 meter/sec
+----------------------------------------------------------------------
+ 
+======================================================================
+
+
+================= Hydrodynamic Simulation Diagnostic =================
+ 
+  Shallow water equations
+  -----------------------
+ 
+  Number of time steps        : 3427295
+  Minimum time step (s)       : 9.090909
+  Maximum time step (s)       : 19.354839
+  Average time step (s)       : 18.401801
+======================================================================
+
+
+========================= Simulation Timings =========================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Hydrodynamic Module                        9775.77         2478.94
+    Flow calculations                        9656.80         2448.52
+      Update forcings                         243.17           63.61
+      Solve Shallow Water eq.                6220.08         1574.27
+      Other calculation                      3193.55          810.64
+  ------------------------------------------------------------------
+  Total                                      9775.77         2478.94
+  ------------------------------------------------------------------
+======================================================================
+
+
+===================== MPI Communication Timings ======================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Halo data                                   724.45          175.19
+  Additional data                             697.06          166.04
+  ------------------------------------------------------------------
+  Total                                      1666.48          400.72
+  ------------------------------------------------------------------
+======================================================================
+
+
+========================== Overall Timings ===========================
+  ------------------------------------------------------------------
+  Task                                      CPU time    Elapsed time
+  ------------------------------------------------------------------
+  Pre-processing                                1.38            0.97
+  Calculation                                9777.81         2479.44
+  License check                                63.45           17.88
+  Post-processing                              62.09           30.65
+  ------------------------------------------------------------------
+  Total                                      9907.05         2529.63
+  ------------------------------------------------------------------
+======================================================================
+
+
+============================ Memory Usage ============================
+  Peak memory usage (MB)                                       51.61
+======================================================================
+
+
+========================== Parallelization ===========================
+  Number of threads per subdomain : 4
+  Number of subdomains            : 6
+======================================================================
+ 
+  Number of warnings: 0
+ 
+  Normal run completion
