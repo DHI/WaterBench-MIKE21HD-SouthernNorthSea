@@ -1,0 +1,9 @@
+exported (70465 bytes) DDW1A2_GEOxyz_D02_Buoy_Pos_2023-11_dataReturn_Rev3_20240319.nc
+exported (61866 bytes) DDW1A2_GEOxyz_D02_Hydro_Var_2023-11_dataReturn_Rev3_20240319.nc
+exported (42758 bytes) DDW1A2_GEOxyz_D02_Hydro_WL_2023-11_dataReturn_Rev3_20240319.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D02_Hydro_Currents_2023-11_dataReturn_Rev3_20240319.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D02_Hydro_Waves_Var_2023-11_dataReturn_Rev3_20240319.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D02_Hydro_Waves_Spectra_2023-11_dataReturn_Rev3_20240319.nc
+exported (70448 bytes) DDW1A2_GEOxyz_D02_Meteo_Var_2023-11_dataReturn_Rev3_20240319.nc
+exported (1289288 bytes) DDW1A2_GEOxyz_D02_Meteo_Wind_LiDAR_2023-11_dataReturn_Rev3_20240319.nc
+exported (51451 bytes) DDW1A2_GEOxyz_D02_Meteo_Wind_Point_2023-11_dataReturn_Rev3_20240319.nc
