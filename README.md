@@ -1,13 +1,13 @@
-# Hydrodynamic model of Øresund
+# Hydrodynamic model of the Southern North Sea
 This README file contains practical information and background information on the data. The dataset can be cited as:
 
-> DHI. (2024). Hydrodynamic model of Øresund: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.14160710](https://doi.org/10.5281/zenodo.14160710)
+> DHI. (2024). Hydrodynamic model of the Southern North Sea: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.XX/zenodo.XX](https://doi.org/10.XX/zenodo.XX)
 
 See the [license](license.txt) for information on using the data.
 
 
 #### Disclaimer:
-*The included MIKE21 model setup is designed as a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
+*The included MIKE21 model setup is a very simplified version of the operational setup provided for the Dutch authorities in connection with the building of windfarms, but the simplified model performance does not in reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
 
 
 ## Intended use
@@ -53,16 +53,16 @@ Separately from the current repository, you can find the output zip file (in Zen
 
 ## Introduction
 
-This folder contains data for a simulation with the MIKE 21 Flow Model FM in the Øresund Strait between Denmark and Sweden. The solution is primarily driven by the surge component introduced at the two open boundaries (one in North and one in South). The meteorological forcings such as air pressure and wind have only a minor effect on the result. The tidal range of the area is 10-20 cm. 
+This folder contains data for a simulation with the MIKE 21 Flow Model FM in the Southern part of the North Sea. The model setup and results of this repository is a downscaled and simplified version of the work performed by DHI for the Rijksdienst voor Ondernemend Nederland (RVO), where DHI offers predictions of metocean conditions in the UJmuiden Ver (IJB) Offshore Wind Farm Zone. You can read more about the work in the [blogpost here](https://www.dhigroup.com/projects/supporting-successful-dutch-offshore-wind-power-development) or the [scientific report](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf).
 
-This repository contains the setup file, input data and observation data, as well as simulation result data. The simulation result data is available in Zenodo. The data supplied in this repository covers the period from 2014-01-01 to 2023-12-31. There is a spin-up period, so it is recommended to remove the first 2 days of the result data. 
+This repository contains the setup file, input data and observation data, as well as simulation result data. The simulation result data is available in Zenodo. The data supplied in this repository covers the period from 2022-01-01 to 2023-12-31. There is a spin-up period, so it is recommended to remove the first 2 days of the result data. 
 
 
 ## The MIKE 21 Flow Model FM
 
 MIKE 21 Flow Model FM is a modelling system based on a flexible mesh approach. The modelling system has been developed for applications within oceanographic, coastal and estuarine environments. The model is based on the numerical solution of the two-dimensional shallow water equations - the depth-integrated incompressible Reynolds averaged Navier-Stokes equations. More information can be found [in the documentation](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_2D.pdf).
 
-The Øresund mesh consists of triangular elements in a higher resolution close to the coast than on deeper waters, and for each node a depth value is assigned by interpolating the EMODnet bathymetry data. The mesh is shown in the figure below. It consists of a total of 3320 elements covering the area of approximately 2000 $km^2$.
+The mesh consists of triangular elements in a higher resolution in the areas of interest, and for each node a depth value is assigned by interpolating the bathymetry data. The mesh is shown in the figure below. It consists of a total of around 8000 elements covering the area of approximately XXX $km^2$.
 
 ![](figures/geometry.png)
 
@@ -78,7 +78,7 @@ The outputs of the model are given as a timeseries for each mesh element on the 
 - the surface elevation,
 - the u and v components of the current velocity.
 
-This data can be found as a separate file in [Zenodo](https://doi.org/10.5281/zenodo.14160710). Once a simulation has been run, a log file will be generated. The log-file for the benchmark simulation is found in the folder [/model](/model), and it contains information on the parameters used and the time spent on the simulation. 
+This data can be found as a separate file in [Zenodo](https://doi.org/10.XXX/zenodo.XXX). Once a simulation has been run, a log file will be generated. The log-file for the benchmark simulation is found in the folder [/model](/model), and it contains information on the parameters used and the time spent on the simulation. 
 
 Since all data, including output from a simulation, is given, it is not necessary to run the MIKE simulation. However, it is possible, since a setup file is supplied as well as all of the input data. Running the MIKE software requires a license. Read more about [obtaining a license](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing) and about [academic licensing](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing/academic-licenses). If you already have a license, read the [step-by-step guide](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_Step_By_Step.pdf) to learn how to run simulations.
 
@@ -96,7 +96,7 @@ The model is validated by comparison to observational data from measurement stat
 
 Below, the comparison between the observational data from one such measurement station and MIKE 21 is shown first followed by the comparison to the altimetry data. The production of these and many more plots is found in the notebooks code/model_validation_*.ipynb.
 
-![](figures/modelskill_comparison_Dragor.png)
+![](figures/modelskill_comparison_Europlatform.png)
 ![](figures/altimetry_comparison.png)
 
 
@@ -106,19 +106,18 @@ Several data sources contribute to this case. They are outlined below.
 
 The following changes have been made to the data:
 
-- Sea levels in measurement stations: Data has been filtered to only include "good" or "probably good" data points according to quality flags. The coordinates of some stations have been moved into the simulation domain, since they are sometimes located so close to land (e.g. in a harbor) that the mesh is not covering it. 
-- Current velocities in measurement stations: Data has been filtered to only include "good" or "probably good" data points according to quality flags. Some faulty observations have been removed manually (e.g. zero-values and outliers). The u and v components of the current velocities are calculated from the speed and directions. The data is given at different depths, so depth-averaged values have been calculated. 
+- ddd
+- ddd
 - Altimetry data: Data has been filtered to only include "good" data points according to quality flags. 
 
 
 | Data   | Source|  Citation | License | 
 | -------- | ------- | ------- | ------- |
-| Mesh | The mesh is developed by DHI. | Repository citation, see [the top](#Hydrodynamical-model-of-Øresund) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| Bathymetry | The bathymetry is based on the EMODnet Bathymetry Digital Terrain Model (DTM) 2020. | EMODnet Bathymetry Consortium (2020). EMODnet Digital Bathymetry (DTM 2020).EMODnet Bathymetry Consortium [https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a](https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| Wind and Air pressure | The ERA5 reanalysis of globate climate. Produced by Copernicus Climate Change Service at ECMWF. | Hersbach, H., Bell, B., Berrisford, P., Biavati, G., Horányi, A., Muñoz Sabater, J., Nicolas, J., Peubey, C., Radu, R., Rozum, I., Schepers, D., Simmons, A., Soci, C., Dee, D., Thépaut, J-N. (2023): ERA5 hourly data on pressure levels from 1940 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS), DOI: 10.24381/cds.bd0915c6 (Accessed on 19-12-2023) | <sub>See full license [here](https://apps.ecmwf.int/datasets/licences/copernicus/). Excerpt: "Access to Copernicus Products is given for any purpose in so far as it is lawful, whereas use may include, but is not limited to: reproduction; distribution; communication to the public; adaptation, modification and combination with other data and information; or any combination of the foregoing." <sub>|
-| Boundary condition | The boundary condition input is obtained from DHI's Danish Waters and Baltic Sea (DKBS) model, which is a 3-dimensional hydrodynamic model. | DHI, ”Water levels and currents on the boundaries of Øresund from the DKBS hydrodynamical model” (2024). | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| Sea levels in measurement stations | Retrieved through the [Copernicus Marine Service (CMEMS, or Copernicus Marine Environmental Monitoring Service)](https://www.copernicus.eu/en/copernicus-services/marine). More specifically, the open download service from the Marine Data Store is used. It can be found [here](https://data.marine.copernicus.eu/product/INSITU_BAL_PHYBGCWAV_DISCRETE_MYNRT_013_032/download?dataset=cmems_obs-ins_bal_phybgcwav_mynrt_na_irr_202311--ext--history). | Copernicus Marine Service, "Baltic Sea- In Situ Near Real Time Observations" (2024), [https://doi.org/10.48670/moi-00032](https://doi.org/10.48670/moi-00032). | <sub>See full license [here](https://marine.copernicus.eu/user-corner/service-commitments-and-licence). Excerpt: "The Licensee is hereby granted a worldwide, non exclusive, royalty free, perpetual licence, (subject to the terms and conditions of this agreement) to: (a) make and use such reasonable copies of Copernicus Marine Service Products for internal use and back up purposes; (b) modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose; (c) redistribute, disseminate any Copernicus Marine Service Product in their original form via any media."<sub> |
-| Current velocities in measurement stations | Retrieved from SMHI (Meteorological and Hydrological Institute of Sweden). The data is subsampled using a rolling median to get half hour observations, and then the u and v components are calculated from the speed and directions. | Meteorological and Hydrological Institute of Sweden, "Oceanographic observations" (2024), URL: [https://www.smhi.se/en/services/open-data/oceanographic-observations](https://www.smhi.se/en/services/open-data/oceanographic-observations) (accessed: 2024-11-18) | [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode.en) |
+| Mesh | The mesh is developed by DHI. | Repository citation, see [the top](#The-Dutch-Coast-as-a-benchmark-case) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Bathymetry | The bathymetry is based on: <br> 1: the EMODnet Bathymetry Digital Terrain Model (DTM) 2020. <br> 2: Rijkswaterstaat’s bathymetric measurements along the Dutch coasts <br> 3: FUGRO’s bathymetric measurements at the HKZ, HKN and HKW wind farm zones <br> 4: MMT SWEDEN AB’s bathymetric survey for the TNW wind farm zone <br> 5: GEOxyz’s bathymetric survey of IJmuiden Ver wind farm zone (alpha and beta) <br> 6: FUGRO’s bathymetric survey of IJmuiden Ver Wind Farm Zone (gamma). <br>The bathymetry data is interpolated onto the mesh. | 1: EMODnet Bathymetry Consortium (2020). EMODnet Digital Bathymetry (DTM 2020).EMODnet Bathymetry Consortium [https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a](https://doi.org/10.12770/bb6a87dd-e579-4036-abe1-e649cea9881a) <br>For the rest, more information can be found in: DHI, "Metocean Assessment Modelling Report, IJmuiden Ver Wind Farm Zone", Dec 2023, URL: [https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf) (accessed: 2024-11-13) | The data has been interpolated to the mesh resolution such that the original resolution is no longer represented nor reproduceable from the attached mesh. Hence, the mesh with the depth estimates is shared under the same licence as the rest of this repository, namely [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). |
+| Wind and Air pressure | See description below |  |  |
+| Boundary condition |  |  |
+| Sea levels in measurement stations | Data from the stations K13a, J61, F3 platform and Europlatform is retrieved through the [Copernicus Marine Service (CMEMS, or Copernicus Marine Environmental Monitoring Service)](https://www.copernicus.eu/en/copernicus-services/marine). More specifically, the open download service dashboard, which can be found [here](https://marineinsitu.eu/dashboard/). The data from the three other stations has been retrieved from the Netherlands Enterprise Agency through the websites: [IJVA](https://offshorewind.rvo.nl/page/view/4c4cb8e3-a1c7-404f-917f-a2f6e0d8c803/wind-en-water-ijmuiden-ver), [DDW1A](https://offshorewind.rvo.nl/page/view/ac0e26d7-1943-417f-b0f8-6fc3452595c1/wind-en-water-doordewind) and [NWA](https://offshorewind.rvo.nl/page/view/500ae8a0-e3bc-467f-81fe-9196fe42413a/wind-en-water-nederwiek).  | Copernicus Marine Service, "Atlantic- European North West Shelf- Ocean In-Situ Near Real Time observations" (2024), [https://doi.org/10.48670/moi-00045](https://doi.org/10.48670/moi-00045). | See full license [here](https://marine.copernicus.eu/user-corner/service-commitments-and-licence). Excerpt: "The Licensee is hereby granted a worldwide, non exclusive, royalty free, perpetual licence, (subject to the terms and conditions of this agreement) to: (a) make and use such reasonable copies of Copernicus Marine Service Products for internal use and back up purposes; (b) modify, adapt, develop, create and distribute Value Added Products or Derivative Work from Copernicus Marine Service Products for any purpose; (c) redistribute, disseminate any Copernicus Marine Service Product in their original form via any media." |
 
 
 ### Altimetry data
@@ -132,4 +131,4 @@ The altimetry data is extracted from a range of different sources. The data is b
 | Sentinel-6A (6a) | European commission, ESA, EUMETSAT, NASA and NOAA |  [https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-6/data-products](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-6/data-products) |
 | CryoSat-2 (c2) | European Space Agency (ESA) |  [https://earth.esa.int/eogateway/catalog/cryosat-products](https://earth.esa.int/eogateway/catalog/cryosat-products)  |
 | SARAL (sa) | French National Space Agency (CNES) and Indian Space Research Organisation (ISRO) | [https://podaac.jpl.nasa.gov/dataset/ALTIKA_SARAL_L2_OST_XOGDR](https://podaac.jpl.nasa.gov/dataset/ALTIKA_SARAL_L2_OST_XOGDR) |
-| Jason-2 (j2) | National Aeronautics and Space Administration (NASA) and French National Space Agency (CNES) | [https://podaac.jpl.nasa.gov/OSTM-JASON2](https://podaac.jpl.nasa.gov/OSTM-JASON2) |
+| Jason-3 (j3) | NASA, CNES, EUMETSAT, NOAA | [https://sealevel.jpl.nasa.gov/missions/jason-3/summary/](https://sealevel.jpl.nasa.gov/missions/jason-3/summary/) |
