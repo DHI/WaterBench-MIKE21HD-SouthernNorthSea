@@ -7,7 +7,7 @@ See the [license](license.txt) for information on using the data.
 
 
 #### Disclaimer:
-*The included MIKE21 model setup is a very simplified version of the operational setup provided for the Dutch authorities in connection with the building of windfarms, but the simplified model performance does not in reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
+*The included MIKE21 model setup is a simplified version of the operational setup provided for the Dutch authorities (RVO) in connection with the building of windfarms, but the simplified model performance does not in reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
 
 
 ## Intended use
@@ -62,7 +62,7 @@ This repository contains the setup file, input data and observation data, as wel
 
 MIKE 21 Flow Model FM is a modelling system based on a flexible mesh approach. The modelling system has been developed for applications within oceanographic, coastal and estuarine environments. The model is based on the numerical solution of the two-dimensional shallow water equations - the depth-integrated incompressible Reynolds averaged Navier-Stokes equations. More information can be found [in the documentation](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_2D.pdf).
 
-The mesh consists of triangular elements in a higher resolution in the areas of interest, and for each node a depth value is assigned by interpolating the bathymetry data. The mesh is shown in the figure below. It consists of a total of around 8000 elements covering the area of approximately XXX $km^2$.
+The mesh consists of triangular elements in a higher resolution in the areas of interest, and for each node a depth value is assigned by interpolating the bathymetry data. The mesh is shown in the figure below. It consists of a total of around 8000 elements covering the area of approximately 24.000 $km^2$.
 
 ![](figures/geometry.png)
 
