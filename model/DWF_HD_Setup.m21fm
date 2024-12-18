@@ -1,6 +1,6 @@
-// Created     : 2024-11-12 15:13:34
+// Created     : 2024-12-18 9:59:58
 // DLL         : C:\Program Files (x86)\DHI\MIKE Zero\2024\bin\x64\pfs2004.dll
-// Version     : 22.0.3.17277
+// Version     : 22.0.3.17314
 
 [FemEngineHD]
    [DOMAIN]
@@ -8,7 +8,7 @@
       discretization = 2
       number_of_dimensions = 2
       number_of_meshes = 1
-      file_name = |.\Mesh_8000_elems_HD_v2.mesh|
+      file_name = |..\input\Mesh_8000_elems_HD_v2.mesh|
       type_of_reordering = 1
       number_of_domains = 16
       coordinate_type = 'LONG/LAT'
@@ -1709,8 +1709,8 @@
 
       [OUTPUTS]
          Touched = 1
-         MzSEPfsListItemCount = 1
-         number_of_outputs = 1
+         MzSEPfsListItemCount = 2
+         number_of_outputs = 2
          [OUTPUT_1]
             Touched = 1
             include = 1
@@ -1895,6 +1895,239 @@
             EndSect  // INUNDATION
 
          EndSect  // OUTPUT_1
+
+         [OUTPUT_2]
+            Touched = 1
+            include = 1
+            title = 'Points'
+            file_name = 'Points.dfs0'
+            type = 1
+            format = 0
+            flood_and_dry = 2
+            coordinate_type = 'LONG/LAT'
+            zone = 0
+            input_file_name = ||
+            input_format = 1
+            interpolation_type = 2
+            use_end_time = 1
+            first_time_step = 0
+            last_time_step = 105114
+            time_step_frequency = 3
+            number_of_points = 7
+            [POINT_1]
+               name = 'NWA'
+               x = 3.135779
+               y = 53.381352
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_1
+
+            [POINT_2]
+               name = 'IJVA'
+               x = 3.710438
+               y = 52.883814
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_2
+
+            [POINT_3]
+               name = 'DDW1A'
+               x = 5.368097782135
+               y = 54.197719573975
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_3
+
+            [POINT_4]
+               name = 'F3platform'
+               x = 4.7199997901917
+               y = 54.849994659424
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_4
+
+            [POINT_5]
+               name = 'K13a'
+               x = 3.2190001010895
+               y = 53.217998504639
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_5
+
+            [POINT_6]
+               name = 'Europlatform'
+               x = 3.28
+               y = 52.0
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_6
+
+            [POINT_7]
+               name = 'J61'
+               x = 2.94380402565
+               y = 53.823249816895
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_7
+
+            [LINE]
+               number_of_points = 2
+               [POINT_1]
+                  x = -2.45909983652079
+                  y = 49.6751211875227
+                  z = -104.887466430664
+               EndSect  // POINT_1
+
+               [POINT_2]
+                  x = 8.837038260297559
+                  y = 56.0
+                  z = 8.74644565582275
+               EndSect  // POINT_2
+
+               npoints = 20
+            EndSect  // LINE
+
+            [PLANE]
+               number_of_points = 2
+               [POINT_1]
+                  x = -2.45909983652079
+                  y = 49.6751211875227
+               EndSect  // POINT_1
+
+               [POINT_2]
+                  x = 8.837038260297559
+                  y = 56.0
+               EndSect  // POINT_2
+
+               layer_min = 1
+               layer_max = 10
+               z_min = -104.887466430664
+               z_max = 31.47322807312011
+               npoints_horizontal = 20
+               npoints_vertical = 10
+            EndSect  // PLANE
+
+            [AREA]
+               number_of_points = 4
+               [POINT_1]
+                  x = -2.572061217488974
+                  y = 49.61187239939792
+               EndSect  // POINT_1
+
+               [POINT_2]
+                  x = -2.572061217488974
+                  y = 56.06324878812477
+               EndSect  // POINT_2
+
+               [POINT_3]
+                  x = 8.949999641265743
+                  y = 56.06324878812477
+               EndSect  // POINT_3
+
+               [POINT_4]
+                  x = 8.949999641265743
+                  y = 49.61187239939792
+               EndSect  // POINT_4
+
+               layer_min = 1
+               layer_max = 10
+               orientation = 0.0
+               x_origo = -2.45909983652079
+               x_ds = 0.594533584043071
+               x_npoints = 20
+               y_origo = 49.6751211875227
+               y_ds = 0.594533584043071
+               y_npoints = 12
+               z_origo = -104.887466430664
+               z_ds = 15.15118827819824
+               z_npoints = 10
+            EndSect  // AREA
+
+            [PARAMETERS_2D]
+               Touched = 0
+               SURFACE_ELEVATION = 1
+               STILL_WATER_DEPTH = 0
+               TOTAL_WATER_DEPTH = 0
+               U_VELOCITY = 1
+               V_VELOCITY = 1
+               P_FLUX = 0
+               Q_FLUX = 0
+               CURRENT_SPEED = 0
+               CURRENT_DIRECTION = 0
+               WIND_U_VELOCITY = 0
+               WIND_V_VELOCITY = 0
+               AIR_PRESSURE = 0
+               PRECIPITATION = 0
+               EVAPORATION = 0
+               BED_RESISTANCE_COEFFICIENT = 0
+               DRAG_COEFFICIENT = 0
+               BED_SHEARSTRESS = 0
+               BED_SHEARSTRESS_X_COMPONENT = 0
+               BED_SHEARSTRESS_Y_COMPONENT = 0
+               EDDY_VISCOSITY = 0
+               CFL_NUMBER = 0
+               CONVERGENCE_ANGLE = 0
+               AREA = 0
+            EndSect  // PARAMETERS_2D
+
+            [PARAMETERS_3D]
+               Touched = 0
+               U_VELOCITY = 1
+               V_VELOCITY = 1
+               W_VELOCITY = 1
+               WS_VELOCITY = 0
+               TURBULENT_KINETIC_ENERGY = 0
+               DISSIPATION_OF_TKE = 0
+               CURRENT_SPEED = 0
+               CURRENT_DIRECTION_HORIZONTAL = 0
+               CURRENT_DIRECTION_VERTICAL = 0
+               HORIZONTAL_EDDY_VISCOSITY = 0
+               VERTICAL_EDDY_VISCOSITY = 0
+               CFL_NUMBER = 0
+               VOLUME = 0
+            EndSect  // PARAMETERS_3D
+
+            [DISCHARGE]
+               Touched = 0
+               Type = 1
+               domain = 1
+               DISCHARGE = 1
+               ACCUMULATED_DISCHARGE = 1
+               DISCHARGE_POSITIVE = 1
+               ACCUMULATED_DISCHARGE_POSITIVE = 1
+               DISCHARGE_NEGATIVE = 1
+               ACCUMULATED_DISCHARGE_NEGATIVE = 1
+               FLOW = 1
+            EndSect  // DISCHARGE
+
+            [MASSBUDGET]
+               Touched = 0
+               DISCHARGE = 1
+               ACCUMULATED_DISCHARGE = 1
+               FLOW = 1
+            EndSect  // MASSBUDGET
+
+            [INUNDATION]
+               Touched = 0
+               MAXIMUM_HEIGHT = 1
+               MAXIMUM_SURFACE_ELEVATION = 1
+               TIME_MAXIMUM_HEIGHT = 1
+               MAXIMUM_CURRENT_SPEED = 1
+               DIRECTION_AT_MAXIMUM_CURRENT_SPEED = 1
+               U_VELOCITY_AT_MAXIMUM_CURRENT_SPEED = 1
+               V_VELOCITY_AT_MAXIMUM_CURRENT_SPEED = 1
+               TIME_MAXIMUM_CURRENT_SPEED = 1
+               MAXIMUM_FLUX_MAGNITUDE = 0
+               DIRECTION_AT_MAXIMUM_FLUX_MAGNITUDE = 0
+               P_FLUX_AT_MAXIMUM_FLUX_MAGNITUDE = 0
+               Q_FLUX_AT_MAXIMUM_FLUX_MAGNITUDE = 0
+               TIME_MAXIMUM_FLUX_MAGNITUDE = 0
+               DURATION_ABOVE_THRESHOLD = 1
+               TIME_FIRST_ABOVE_THRESHOLD = 1
+               threshold_height = 0.0
+            EndSect  // INUNDATION
+
+         EndSect  // OUTPUT_2
 
       EndSect  // OUTPUTS
 
