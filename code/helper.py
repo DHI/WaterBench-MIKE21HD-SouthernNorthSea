@@ -5,6 +5,7 @@ import modelskill as ms
 
 obs_fldr = "../observations/" 
 df_stn = pd.read_csv(obs_fldr + "stations.csv", index_col=0)
+df_stn_cur = pd.read_csv(obs_fldr + "current_stations.csv", index_col=0)
 
 def get_wl_point_obs():
     """Get water level point observations as list of PointObservation objects"""
@@ -23,7 +24,7 @@ def get_u_v_point_obs():
     qv = ms.Quantity(name="v-current", unit="m/s")
     ulist = []
     vlist = []
-    for i, row in df_stn.iterrows():
+    for i, row in df_stn_cur.iterrows():
         if not Path(obs_fldr + f"{i}_u_v.csv").exists():
             continue
         df = pd.read_csv(obs_fldr + f"{i}_u_v.csv", index_col=0) 
