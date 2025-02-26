@@ -7,7 +7,7 @@ See the [license](license.txt) for information on using the data.
 
 
 #### Disclaimer:
-*The included MIKE21 model setup is a simplified version of the operational setup provided for the Dutch authorities (RVO) in connection with the building of windfarms, but the simplified model performance does not in reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
+*The included MIKE21 model setup is a simplified version of the operational setup provided for the Dutch authorities (RVO) in connection with the building of windfarms, but the simplified model performance does not reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
 
 
 ## Intended use
