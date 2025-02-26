@@ -1,7 +1,7 @@
 # Hydrodynamic model of the Southern North Sea
 This README file contains practical information and background information on the data. The dataset can be cited as:
 
-> DHI. (2024). Hydrodynamic model of the Southern North Sea: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.XX/zenodo.XX](https://doi.org/10.XX/zenodo.XX)
+> DHI. (2024). Hydrodynamic model of the Southern North Sea: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.14929387](https://doi.org/10.5281/zenodo.14929387)
 
 See the [license](license.txt) for information on using the data.
 
@@ -78,7 +78,7 @@ The outputs of the model are given as a timeseries for each mesh element on the 
 - the surface elevation,
 - the u and v components of the current velocity.
 
-This data can be found as a separate file in [Zenodo](https://doi.org/10.XXX/zenodo.XXX). Once a simulation has been run, a log file will be generated. The log-file for the benchmark simulation is found in the folder [/model](/model), and it contains information on the parameters used and the time spent on the simulation. 
+This data can be found as a separate file in [Zenodo](https://doi.org/10.5281/zenodo.14929387). Once a simulation has been run, a log file will be generated. The log-file for the benchmark simulation is found in the folder [/model](/model), and it contains information on the parameters used and the time spent on the simulation. 
 
 Since all data, including output from a simulation, is given, it is not necessary to run the MIKE simulation. However, it is possible, since a setup file is supplied as well as all of the input data. Running the MIKE software requires a license. Read more about [obtaining a license](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing) and about [academic licensing](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing/academic-licenses). If you already have a license, read the [step-by-step guide](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_Step_By_Step.pdf) to learn how to run simulations.
 
