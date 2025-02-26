@@ -89,7 +89,7 @@ The input and output data are given as dfs files. These files can be processed u
 
 The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used for validating the model outputs by comparing to observational data. 
 
-The model is validated by comparison to observational data from measurement stations in Øresund and altimetry data from satellites. This is done in the notebooks code/model_validation_*.ipynb. The leftmost figure below shows the location of the measurement stations, and the rightmost figure shows the coverage of the altimetry data.
+The model is validated by comparison to observational data from measurement stations in the Southern North Sea and altimetry data from satellites. This is done in the notebooks code/model_validation_*.ipynb. The leftmost figure below shows the location of the measurement stations, and the rightmost figure shows the coverage of the altimetry data.
 
 ![](figures/stations.png)
 ![](figures/altimetry_coverage.png)
