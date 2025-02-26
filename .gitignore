@@ -166,3 +166,4 @@ output.zip
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 input/wind.dfs2
+.preprocessing/raw_data/IJM_full_model.dfs0
