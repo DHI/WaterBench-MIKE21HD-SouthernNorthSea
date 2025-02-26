@@ -1,0 +1,4 @@
+This work is openly licensed via CC BY-NC 4.0. Only non-commercial use. Read more here: [https://creativecommons.org/licenses/by-nc/4.0/deed.en](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
+
+The dataset includes redistribution of third-party datasets in compliance with their respective licenses. 
+Find more information about the licenses of the different datasets in the README.md file.

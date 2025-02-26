@@ -1,0 +1,11 @@
+exported (131521 bytes) DDW1A2_GEOxyz_D03_Buoy_Pos_2024-06_dataReturn_Rev3_20240829.nc
+exported (113085 bytes) DDW1A2_GEOxyz_D03_Hydro_Var_2024-06_dataReturn_Rev3_20240829.nc
+exported (75245 bytes) DDW1A2_GEOxyz_D03_Hydro_WL_2024-06_dataReturn_Rev3_20240829.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D03_Hydro_Currents_2024-06_dataReturn_Rev3_20240829.nc
+exported (667279 bytes) DDW1A2_GEOxyz_D03_Hydro_Currents_Accurasea_2024-06_dataReturn_Rev3_20240829.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D03_Hydro_Waves_Var_2024-06_dataReturn_Rev3_20240829.nc
+exported (52933 bytes) DDW1A2_GEOxyz_D03_Hydro_Waves_Var_Accurasea_2024-06_dataReturn_Rev3_20240829.nc
+not exported (0 bytes) DDW1A2_GEOxyz_D03_Hydro_Waves_Spectra_2024-06_dataReturn_Rev3_20240829.nc
+exported (131504 bytes) DDW1A2_GEOxyz_D03_Meteo_Var_2024-06_dataReturn_Rev3_20240829.nc
+exported (2154736 bytes) DDW1A2_GEOxyz_D03_Meteo_Wind_LiDAR_2024-06_dataReturn_Rev3_20240829.nc
+exported (93471 bytes) DDW1A2_GEOxyz_D03_Meteo_Wind_Point_2024-06_dataReturn_Rev3_20240829.nc
