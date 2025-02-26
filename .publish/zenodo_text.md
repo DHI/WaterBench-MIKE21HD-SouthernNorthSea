@@ -11,6 +11,7 @@ Files:
 * **README**. Description of dataset with details on citations, data processing, and background information. 
 * **WaterBench-MIKE21HD-SouthernNorthSea.zip**: model setup, input data (e.g., boundary conditions, wind), observational data, and code for data exploration and model validation. 
 * **MIKE21HD-SouthernNorthSea-output.zip**: 2-years model result files `Area.dfsu` and `Points.dfs0` (~4 GB).
+* **MIKE21HD-SouthernNorthSea-input.zip**: wind input data for the model(~0.5 GB).
 
 
 ## DOI
@@ -25,7 +26,7 @@ Files:
 
 ## Publication date
 
-2024-12-20
+2025-03-01
 
 ## Funding
 
