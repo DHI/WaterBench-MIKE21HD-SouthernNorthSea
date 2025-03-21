@@ -5,11 +5,13 @@ This README provides practical and background information on the dataset. The da
 
 See the [license](license.txt) for details on data usage.
 
-<div class="alert alert-warning" role="alert">
-  <strong>⚠️ Important Disclaimer</strong><br><br>
-  This model setup is a <strong>simplified version</strong> of a hindcast model developed by DHI. The mesh has been reduced from over <strong>150,000 to ~8,000 elements</strong>, and input data has lower temporal and spatial resolution. As a result, model accuracy is reduced — for example, typical RMSE in water levels increases from ~8 cm to <strong>15–20 cm</strong> in this simplified version.<br><br>
-  It is <strong>not calibrated</strong> for operational use. Use is limited to <strong>educational and research purposes only</strong> — results should <strong>not</strong> inform decision-making. Performance shown here does <strong>not</strong> represent that of DHI’s high-resolution models.
-</div>
+> ⚠️ **Important Disclaimer**  
+> This model setup is a **highly simplified version** of a hindcast model developed by DHI.  
+> The mesh has been reduced from over **150,000** to approximately **8,000 elements**, and input data is coarser in both time and space.  
+> As a result, model accuracy is lower — e.g., typical RMSE for water levels increases from ~8 cm to **15–20 cm**.  
+>  
+> This model is **not calibrated** for operational use. It is intended for **educational and research purposes only**, and the results **must not** be used for decision-making.  
+> The performance shown here does **not** reflect that of DHI’s high-resolution models.
 
 
 ## Intended use
