@@ -57,7 +57,7 @@ Separately from the current repository, you can find the output zip file (in Zen
 
 This folder contains data for a MIKE 21 Flow Model FM simulation in the southern part of the North Sea. The model domain spans from the English Channel along the southern and eastern English coast, part of the northern French coast, and the coasts of Belgium, the Netherlands, northwest Germany, and southwest Denmark.
 
-This model setup and dataset represent a downscaled and simplified version of the work performed by DHI for the Rijksdienst voor Ondernemend Nederland (RVO). In that work, DHI provides metocean condition predictions for the IJmuiden Ver (IJB) Offshore Wind Farm Zone. More details are available in the [blogpost here](https://www.dhigroup.com/projects/supporting-successful-dutch-offshore-wind-power-development) or the [scientific report](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf).
+This model setup and dataset represent a simplified version of the work performed by DHI for the Rijksdienst voor Ondernemend Nederland (RVO). In that work, DHI provides metocean condition predictions for the IJmuiden Ver (IJB) Offshore Wind Farm Zone. More details are available in the [blogpost here](https://www.dhigroup.com/projects/supporting-successful-dutch-offshore-wind-power-development) or the [scientific report](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf).
 
 This repository includes 
 
@@ -71,7 +71,7 @@ The dataset covers the period 2022-01-01 to 2023-12-31. Since the simulation inc
 
 MIKE 21 Flow Model FM is a modelling system based on a flexible mesh approach. The modelling system has been developed for applications within oceanographic, coastal and estuarine environments. The model is based on the numerical solution of the two-dimensional shallow water equations - the depth-integrated incompressible Reynolds averaged Navier-Stokes equations. More information can be found [in the documentation](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_2D.pdf).
 
-The mesh consists of triangular elements in a higher resolution in the areas of interest, and for each node a depth value is assigned by interpolating the bathymetry data. The mesh is shown in the figure below. It consists of a total of around 8000 elements covering the area of approximately 24.000 $km^2$.
+The mesh consists of triangular elements, with higher resolution in areas of interest. For each mesh node, a depth value is assigned by interpolating bathymetric data. The mesh is shown in the figure below and consists of approximately 8000 elements covering an area of about 24.000 $km^2$.
 
 ![](figures/geometry.png)
 
@@ -83,27 +83,28 @@ A simulation can be performed with the [MIKE modelling software](https://www.dhi
 
 This input data can be found in the [/input](/input) folder. Model parameters, e.g. bed resistance constant, can be calibrated by comparing the model simulations to observational data. 
 
-The outputs of the model are given as a timeseries for each mesh element on the spatial domain containing the variables:
-- the surface elevation,
-- the u and v components of the current velocity.
+The model outputs are provided both as point timeseries (dfs0) and as time-varying full-domain results (dfsu) including the variables:
 
-This data can be found as a separate file in [Zenodo](https://doi.org/10.5281/zenodo.14929387). Once a simulation has been run, a log file will be generated. The log-file for the benchmark simulation is found in the folder [/model](/model), and it contains information on the parameters used and the time spent on the simulation. 
+- surface elevation
+- u and v components of current velocity.
 
-Since all data, including output from a simulation, is given, it is not necessary to run the MIKE simulation. However, it is possible, since a setup file is supplied as well as all of the input data. Running the MIKE software requires a license. Read more about [obtaining a license](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing) and about [academic licensing](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing/academic-licenses). If you already have a license, read the [step-by-step guide](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_Step_By_Step.pdf) to learn how to run simulations.
+These results are provided as a separate file on [Zenodo](https://doi.org/10.5281/zenodo.14929387). After running a simulation, a log file is generated. For the benchmark simulation, this log file is available in the [/model](/model) folder and contains details on parameter settings and runtime.
 
-The input and output data are given as dfs files. These files can be processed using the MIKE IO Python package developed by DHI. Find more information on the data types in the [MIKE IO documentation](https://dhi.github.io/mikeio/).
+Although all input and output data are provided, and re-running the model is not necessary for analysis, it is possible using the supplied setup file and inputs. Running the MIKE software requires a license. Read more about [obtaining a license](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing) and about [academic licensing](https://www.dhigroup.com/technologies/mikepoweredbydhi/pricing/academic-licenses). If you already have a license, read the [step-by-step guide](https://manuals.mikepoweredbydhi.help/latest/Coast_and_Sea/MIKE_FM_HD_Step_By_Step.pdf) to learn how to run simulations.
+
+The input and output data are given as dfs files, which can be processed using the [MIKE IO](https://dhi.github.io/mikeio/) Python package developed by DHI. 
 
 
 ## Model validation
 
-The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used for validating the model outputs by comparing to observational data. 
+The [ModelSkill Python package](https://dhi.github.io/modelskill/) developed at DHI can be used to validate model outputs by comparing them to observational data.
 
-The model is validated by comparison to observational data from measurement stations in the Southern North Sea and altimetry data from satellites. This is done in the notebooks code/model_validation_*.ipynb. The leftmost figure below shows the location of the measurement stations, and the rightmost figure shows the coverage of the altimetry data.
+In this case, the model is validated using both in-situ measurements from stations in the Southern North Sea and satellite altimetry data. This validation is performed in the Jupyter notebooks located at `code/model_validation_*.ipynb`. The leftmost figure below shows the location of the measurement stations, while the rightmost figure shows the spatial coverage of the altimetry data.
 
 ![](figures/stations.png)
 ![](figures/altimetry_coverage.png)
 
-Below, the comparison between the observational data from one such measurement station and MIKE 21 is shown first followed by the comparison to the altimetry data. The production of these and many more plots is found in the notebooks code/model_validation_*.ipynb.
+Below is an example comparison between observational data from a measurement station and the MIKE 21 simulation, followed by a comparison with satellite altimetry data. Many more similar plots can be found in the validation notebooks `code/model_validation_*.ipynb`.
 
 ![](figures/modelskill_comparison_Europlatform.png)
 ![](figures/altimetry_comparison.png)
@@ -111,13 +112,13 @@ Below, the comparison between the observational data from one such measurement s
 
 ## Data sources
 
-Several data sources contribute to this case. They are outlined below. 
+Several data sources contribute to this case, as outlined below. 
 
 The following changes have been made to the data:
 
-- Water level observations: Data has been filtered to only include "good" data points according to quality flags. Data is centered around zero (subtraction of mean) and a rolling average is calculated for intervals of 30 minutes. The time-index is converted to UTC. The lon/lat coordinates are calculated as a mean value of the observed, since the buoys are drifting slightly. 
-- Current velocity observations: Data has been filtered to only include "good" data points according to quality flags. Speed and direction is converted to u and v velocity components. If several depth observations, an average is calculated across depth. The time-index is converted to UTC, and observations are assumed uniformly spread throughout the day (only date is given in data, not timestamp). The lon/lat coordinates are calculated as a mean value of the observed, since the buoys are drifting slightly. 
-- Altimetry data: Data has been filtered to only include "good" data points according to quality flags. 
+- **Water level observations**: Only data points marked as "good" according to quality flags are included. The data is centered around zero (mean subtracted), and a 30-minute rolling average is applied. The time index is converted to UTC. Since the buoys drift slightly, longitude and latitude coordinates are computed as the mean position over time.  
+- **Current velocity observations**: Only "good" data points (based on quality flags) are used. Speed and direction are converted into u and v velocity components. If multiple depths are available, the velocities are averaged across depth. The time index is converted to UTC. Since only the date (not time) is provided, observations are assumed to be uniformly distributed throughout the day. Longitude and latitude are again computed as mean positions over time. 
+- **Altimetry data**: Only data points marked as "good" by quality flags are included.
 
 
 | Data   | Source|  Citation | License | 
@@ -132,7 +133,7 @@ The following changes have been made to the data:
 
 ### Altimetry data
 
-The altimetry data is extracted from a range of different sources. The data is based on satellite observations, and the data is downloaded using [DHI's services for marine observation data](https://altimetry.dhigroup.com/). Data sources:
+The altimetry data is based on satellite observations and was downloaded via [DHI's services for marine observation data](https://altimetry.dhigroup.com/). The satellites and data sources are listed below:
 
 | Satellite name    | Owner|  Link |
 | -------- | ------- | ------- |
