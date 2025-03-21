@@ -1,23 +1,25 @@
 # Hydrodynamic model of the Southern North Sea
-This README file contains practical information and background information on the data. The dataset can be cited as:
+This README provides practical and background information on the dataset. The dataset can be cited as:
 
 > DHI. (2024). Hydrodynamic model of the Southern North Sea: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.14929387](https://doi.org/10.5281/zenodo.14929387)
 
-See the [license](license.txt) for information on using the data.
+See the [license](license.txt) for details on data usage.
 
 
 #### Disclaimer:
-*The included MIKE21 model setup is a simplified version of the operational setup provided for the Dutch authorities (RVO) in connection with the building of windfarms, but the simplified model performance does not reflect the quality of the operational setup. Rather, it is a simple demonstration for educational and research purposes. It is not optimized for precision or exhaustive calibration and should not be regarded as a benchmark for best practices in hydrodynamic modeling. The results should not be used for operational or decision-making purposes.*
+*The included MIKE21 model setup is a simplified version of the hindcast model developed by DHI for the Dutch authorities (RVO) in support of offshore wind farm development. The performance of this simplified model does *not* reflect the quality or accuracy of the original hindcast model.*
+
+*This version is intended for **educational and research purposes only**. It is neither fully calibrated nor optimized for precision and should not be considered a benchmark for best practices in hydrodynamic modeling. **The results must *not* be used for operational or decision-making purposes**.*
 
 
 ## Intended use
 
-The dataset is aimed at supporting educational, research, and exploratory activities, such as:
+This dataset is designed to support educational, research, and exploratory activities, including:
 
 * Experimenting with coastal and ocean modeling using MIKE 21.
 * Validating hydrodynamic model outputs with observational data.
-* Developing methods for automatically calibrating model parameters.
-* Building data-driven models, including machine learning surrogates of the MIKE simulation results.
+* Developing methods for automatic model parameter calibration.
+* Building data-driven models, including machine learning surrogates of MIKE simulation results.
 
 
 
@@ -53,9 +55,16 @@ Separately from the current repository, you can find the output zip file (in Zen
 
 ## Introduction
 
-This folder contains data for a simulation with the MIKE 21 Flow Model FM in the Southern part of the North Sea. The area covers the waters from the English channel, along the Southern and Eastern English coast, part of the coast in North of France, the coast of Belgium, the Netherlands, Northwest Germany and Southwest of Denmark. The model setup and results of this repository is a downscaled and simplified version of the work performed by DHI for the Rijksdienst voor Ondernemend Nederland (RVO), where DHI offers predictions of metocean conditions in the UJmuiden Ver (IJB) Offshore Wind Farm Zone. You can read more about the work in the [blogpost here](https://www.dhigroup.com/projects/supporting-successful-dutch-offshore-wind-power-development) or the [scientific report](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf).
+This folder contains data for a MIKE 21 Flow Model FM simulation in the southern part of the North Sea. The model domain spans from the English Channel along the southern and eastern English coast, part of the northern French coast, and the coasts of Belgium, the Netherlands, northwest Germany, and southwest Denmark.
 
-This repository contains the setup file, input data and observation data, as well as simulation result data. The simulation result data is available in Zenodo. The data supplied in this repository covers the period from 2022-01-01 to 2023-12-31. There is a spin-up period, so it is recommended to remove the first 2 days of the result data. 
+This model setup and dataset represent a downscaled and simplified version of the work performed by DHI for the Rijksdienst voor Ondernemend Nederland (RVO). In that work, DHI provides metocean condition predictions for the IJmuiden Ver (IJB) Offshore Wind Farm Zone. More details are available in the [blogpost here](https://www.dhigroup.com/projects/supporting-successful-dutch-offshore-wind-power-development) or the [scientific report](https://offshorewind.rvo.nl/file/download/bfa49f34-f894-4562-882f-eb1a8b7497e9/ijv_20231222-dhi-metocean-modelling.pdf).
+
+This repository includes 
+
+* Model setup files, input data, and observation data.
+* Simulation result and wind input data, available on Zenodo [https://doi.org/10.5281/zenodo.14929387](https://doi.org/10.5281/zenodo.14929387). 
+
+The dataset covers the period 2022-01-01 to 2023-12-31. Since the simulation includes a spin-up period, it is recommended to discard the first two days of result data for analysis.
 
 
 ## The MIKE 21 Flow Model FM
