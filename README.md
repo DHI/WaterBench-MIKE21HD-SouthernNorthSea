@@ -111,13 +111,8 @@ Below is an example comparison between observational data from a measurement sta
 ![](figures/altimetry_comparison.png)
 
 ### Note on Excluded Stations
-Two stations were excluded from the validation due to unreliable comparisons:
 
-* **Whitby Harbour** (Water Levels): The mismatch may be due to questionable observational data or the very coarse local bathymetry in the simplified model. Nearby stations perform well, suggesting this is a local issue.
-
-* **IJMondstroompaal2** (Current Velocities): The comparison appears inconsistent, and current velocity data is generally more difficult to validate.
-
-These stations were removed to avoid confusion, as results at these locations are not reliable for interpretation.
+A few otherwise publicly available stations were excluded from the validation due to unreliable comparisons, most likely caused by their proximity to the coast combined with the very coarse local bathymetry in the simplified model.
 
 
 ## Data sources
