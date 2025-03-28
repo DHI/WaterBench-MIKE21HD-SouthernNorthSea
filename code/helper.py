@@ -1,5 +1,6 @@
 import glob
 from pathlib import Path
+import warnings
 import pandas as pd
 import modelskill as ms
 
@@ -47,6 +48,9 @@ def get_altimetry_obs(quality=None):
         df.index = pd.to_datetime(df.index, format="ISO8601")
         if quality is not None:
             df = df[df.quality_water_level == quality]
-        o = ms.TrackObservation(df, item="water_level", x_item="longitude", y_item="latitude", name=m, quantity=q)
+        
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", message=".*duplicate timestamps.*")
+            o = ms.TrackObservation(df, item="water_level", x_item="longitude", y_item="latitude", name=m, quantity=q)
         altlist.append(o)
     return altlist

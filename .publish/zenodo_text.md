@@ -2,9 +2,9 @@
 
 ## Description
 
-**MIKE 21 Flow Model FM** is a hydrodynamic modeling system based on a flexible mesh approach, used for oceanographic, coastal, and estuarine applications. This repository includes a model setup and 2-year model results for a region in the Southern North Sea as well as observational data, and code for model validation.
+**MIKE 21 Flow Model FM** is a hydrodynamic modeling system based on a flexible mesh approach, used for oceanographic, coastal, and estuarine applications. This repository includes a highly simplified model setup and 2-year simulation results for a region in the Southern North Sea, as well as observational data and code for model validation.
 
-This dataset is part of the WaterBench series by DHI, supporting open research on water-related challenges. It is intended for educational and research purposes, including model validation, parameter calibration, and machine learning applications. Results should not be used for decision-making.
+This dataset is part of the **WaterBench** series by DHI, supporting open research on water-related challenges. It is intended for **educational and research purposes only**, such as model validation, parameter calibration, and machine learning applications. The model mesh has been reduced from over 150,000 to ~8,000 elements, and inputs are coarser in time and space, resulting in increased error (e.g., typical RMSE in water levels increases from ~8 cm to 15–20 cm). **Results must not be used for decision-making.**
 
 Files:
 
@@ -16,8 +16,7 @@ Files:
 
 ## DOI
 
-10.XX/zenodo.XX
-
+10.5281/zenodo.14929387
 
 ## Contributors
 
@@ -26,7 +25,7 @@ Files:
 
 ## Publication date
 
-2025-03-01
+2025-03-24
 
 ## Funding
 
