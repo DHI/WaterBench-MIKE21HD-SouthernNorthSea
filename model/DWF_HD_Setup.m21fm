@@ -1,4 +1,4 @@
-// Created     : 2025-02-25 9:2:36
+// Created     : 2025-03-28 10:35:7
 // DLL         : C:\Program Files (x86)\DHI\MIKE Zero\2024\bin\x64\pfs2004.dll
 // Version     : 22.0.3.17314
 
@@ -1913,7 +1913,7 @@
             first_time_step = 0
             last_time_step = 105114
             time_step_frequency = 3
-            number_of_points = 7
+            number_of_points = 10
             [POINT_1]
                name = 'NWA'
                x = 3.135779
@@ -1969,6 +1969,30 @@
                z = -48.07051038742063
                layer = 1
             EndSect  // POINT_7
+
+            [POINT_8]
+               name = 'Dover'
+               x = 1.3166699
+               y = 51.116699
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_8
+
+            [POINT_9]
+               name = 'Cromer'
+               x = 1.29999995
+               y = 52.9333
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_9
+
+            [POINT_10]
+               name = 'Lowestoft'
+               x = 3.188969211888384
+               y = 1.75
+               z = -48.07051038742063
+               layer = 1
+            EndSect  // POINT_10
 
             [LINE]
                number_of_points = 2
