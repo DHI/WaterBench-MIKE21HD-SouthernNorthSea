@@ -16,6 +16,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install Inkscape
+        run: sudo apt-get install -y inkscape
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         env: 
