@@ -23,7 +23,6 @@ This dataset is designed to support educational, research, and exploratory activ
 * Building data-driven models, including machine learning surrogates of MIKE simulation results.
 
 
-
 ## Folder structure
 
 The repository is organized in the following way
