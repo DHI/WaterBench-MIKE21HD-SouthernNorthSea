@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14929387.svg)](https://doi.org/10.5281/zenodo.14929387)
+
+
 # Hydrodynamic model of the Southern North Sea
 This README provides practical and background information on the dataset. The dataset can be cited as:
 

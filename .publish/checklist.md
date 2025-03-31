@@ -47,3 +47,9 @@
 * CaseName.zip 
 * CaseName-outputs.zip 
 * README.pdf (rendered version)
+
+## Pdf rendering:
+* Add .yml file with settings for Quarto pdf rendering
+* Remove Zenodo badge from README.md (it causes an error)
+* Push to github for pdf rendering
+* Remember to add the badge again
