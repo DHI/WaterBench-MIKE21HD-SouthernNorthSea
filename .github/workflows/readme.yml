@@ -1,0 +1,41 @@
+name: Render Markdown to PDF using Quarto
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md  # Only trigger the workflow when README.md changes
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  render-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with: 
+          tinytex: true
+      - name: Render README.md to PDF
+        run: |
+          quarto render README.md --to pdf --output README.pdf
+          
+      - name: Move PDF to .publish folder
+        run: |
+          mv README.pdf .publish/README.pdf
+          
+      - name: Commit PDF
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .publish/README.pdf
+          git commit -m "Add rendered README.pdf"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
