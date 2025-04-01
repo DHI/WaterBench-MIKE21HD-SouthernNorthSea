@@ -22,4 +22,4 @@ def zip_input(fn):
 
 if __name__ == "__main__":
     zip_output(fn=".publish/MIKE21HD-SouthernNorthSea-output.zip")
-    zip_output(fn=".publish/MIKE21HD-SouthernNorthSea-input.zip")
+    zip_input(fn=".publish/MIKE21HD-SouthernNorthSea-input.zip")
