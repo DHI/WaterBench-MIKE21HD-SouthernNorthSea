@@ -5,7 +5,7 @@ This README provides practical and background information on the dataset. The da
 
 > DHI. (2024). Hydrodynamic model of the Southern North Sea: MIKE21 model setup, outputs and observation data (1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.14929387](https://doi.org/10.5281/zenodo.14929387)
 
-See the [license](license.txt) for details on data usage.
+See the [license](LICENSE) for details on data usage.
 
 > ⚠️ **Important Disclaimer**  
 > This model setup is a **highly simplified version** of a hindcast model developed by DHI. The mesh has been reduced from over **150,000** to approximately **8,000 elements**, and input data is coarser in both time and space. As a result, model accuracy is lower — e.g., typical RMSE for water levels increases from ~8 cm to **15–20 cm**.  
