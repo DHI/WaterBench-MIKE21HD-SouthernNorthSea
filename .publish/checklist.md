@@ -4,7 +4,7 @@
 
 * input (dfs and mesh files for MIKE simulation)
 * model (pfs/log files)
-* observations (csv files)
+* observations (one .dfs0 per station + a single stations.csv manifest, see WaterBench STRUCTURE.md §8)
 * code 
 * figures 
 * output_sample (if output to big for repo)
@@ -12,7 +12,7 @@
 * .preprocessing (hidden, also rawdata if possible)
 * .publish (hidden, contain all material/scripts necessary for publishing)
 
-## csv files
+## csv files (intermediate files in .preprocessing/observations_csv, converted to .dfs0)
 
 - Always use UTC, use "datetime_UTC" as name of col
 - iso8601 format: 2014-01-01T00:00:00  (but tz naive)
