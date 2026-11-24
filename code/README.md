@@ -14,4 +14,4 @@ scipy | 1.15.2
 xarray | 2025.3.0
 ipykernel | 6.29.5
 
-[`requirements.txt`](requirements.txt) contains the list of libraries and their versions used in the notebooks (excluding jupyter).
+[`requirements.txt`](../requirements.txt) in the repository root contains the list of libraries and their versions used in the notebooks (excluding jupyter).

@@ -1,17 +1,18 @@
-station,Longitude,Latitude
-NWA,3.135779,53.381352
-IJVA,3.710438,52.883814
-DDW1A,5.36809778213501,54.19771957397461
-F3platform,4.71999979019165,54.84999465942383
-K13a,3.219000101089477,53.21799850463867
-Europlatform,3.2799999713897705,52.0
-J61,2.9438040256500244,53.82324981689453
-Helgoland,7.889999866485596,54.17890167236328
-K141,3.626199960708618,53.26900100708008
-L91,4.869999885559082,53.56600189208984
-Q11,4.14900016784668,52.92499923706055
-Westkapelle,3.440200090408325,51.52230072021485
-ZeebruggeWielingendok,3.1780600547790527,51.355281829833984
-Dover,1.3166699409484863,51.11669921875
-Cromer,1.2999999523162842,52.93330001831055
-Lowestoft,1.75,52.46670150756836
+station_id,lon,lat,crs,vertical_datum
+NWA,3.135779,53.381352,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+IJVA,3.710438,52.883814,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+DDW1A,5.36809778213501,54.19771957397461,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+F3platform,4.71999979019165,54.84999465942383,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+K13a,3.219000101089477,53.21799850463867,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Europlatform,3.2799999713897705,52.0,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+J61,2.9438040256500244,53.82324981689453,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Helgoland,7.889999866485596,54.17890167236328,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+K141,3.626199960708618,53.26900100708008,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+L91,4.869999885559082,53.56600189208984,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Q11,4.14900016784668,52.92499923706055,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Westkapelle,3.440200090408325,51.52230072021485,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+ZeebruggeWielingendok,3.1780600547790527,51.355281829833984,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Dover,1.3166699409484863,51.11669921875,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Cromer,1.2999999523162842,52.93330001831055,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+Lowestoft,1.75,52.46670150756836,EPSG:4326,Mean-subtracted zero reference (absolute vertical datum not retained)
+MO_NN,6.583333015441895,54.0,EPSG:4326,Not applicable (no water-level observations)
