@@ -9,9 +9,9 @@ This dataset is part of the **WaterBench** series by DHI, supporting open resear
 Files:
 
 * **README**. Description of dataset with details on citations, data processing, and background information. 
-* **WaterBench-MIKE21HD-SouthernNorthSea.zip**: model setup, input data (e.g., boundary conditions, wind), observational data, and code for data exploration and model validation. 
+* **WaterBench-MIKE21HD-SouthernNorthSea.zip**: model setup, input data (e.g., boundary conditions), observational data, and code for data exploration and model validation. Wind input is provided separately.
 * **MIKE21HD-SouthernNorthSea-output.zip**: 2-years model result files `Area.dfsu` and `Points.dfs0` (~4 GB).
-* **MIKE21HD-SouthernNorthSea-input.zip**: wind input data for the model(~0.5 GB).
+* **MIKE21HD-SouthernNorthSea-input.zip**: wind input data (`wind.dfs2`) for the model (~0.5 GB); place this file in the `input/` folder.
 
 
 ## DOI

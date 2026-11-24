@@ -2,6 +2,7 @@
 
 import zipfile
 import glob
+import os
 
 zip_fn = ".publish/WaterBench-MIKE21HD-SouthernNorthSea.zip"
 
@@ -13,6 +14,7 @@ def zip_repo():
                 not any([fn.startswith(x) for x in [".", "__", "output\\"]])
                 and "__" not in fn
                 and "." in fn
+                and fn != os.path.join("input", "wind.dfs2")
             ):
                 z.write(fn)
             else:
