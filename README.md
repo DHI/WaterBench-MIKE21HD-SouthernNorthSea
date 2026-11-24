@@ -33,9 +33,9 @@ The repository is organized in the following way
     + MIKE model setup file (.m21fm)
     + log file (.log)
 - input
-    + meteorological forcing (wind, air pressure)
     + lateral boundary conditions (water level and currents)
     + mesh file (.mesh)
+    + meteorological forcing (wind, air pressure), should be downloaded from Zenodo. 
 - observations
     + csv files containing observational data for model validation
 - code
